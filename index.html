@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <script>
+   // Функція виводить привітання
+   function showMessage() {
+  alert( 'Привіт!' );
+}
+
+showMessage();
+// Функція запиту віку
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Батьки дозволили?');
+  }
+}
+let age = prompt('Скільки Вам років?', 18);
+
+if ( checkAge(age) ) {
+  alert( 'Доступ відкритий!' );
+} else {
+  alert( 'Доступ заборонено!' );
+}
+function myMessage() {
+  alert( 'Будем вирішувати вирази!' );
+}
+myMessage();
+// Функція обрахунку, яке число 
+var x =  prompt("Введіть число", "");
+function whatNumber() {
+if (x>0)
+	alert("Число додатнє");
+if (x<0)
+	alert ("Число від'ємне");
+if (x==0)
+	alert ("Число 0");	
+}			
+whatNumber()
+// Калькулятор
+function basicCalc()
+{
+  var num_1 = +prompt("Введіть перше число", "");
+var num_2 = +prompt("Введіть друге число", "");
+var oper = prompt("Введіть операцію яку бажаєте виконати(+, -, *, /)","")
+if(oper=="+"){
+num =(num_1+num_2);}
+if(oper=="-"){
+num_1-num_2;}
+if(oper=="*"){
+num_1*num_2;}
+if(oper=="/"){
+num_1/num_2;}
+alert("Відповідь " +num);
+}
+basicCalc()
+// Функція площа
+var area = (function() {
+ var width = 5;
+ var height = 10;
+ var result = width * height;
+ alert(result);
+} () )
+// Середнє арифметичне
+var num_1 = prompt("Ввести число:", "");
+var num_2 = prompt("Ввести число:", "");
+function serArifm() {
+num = (num_1+num_2)/2;
+alert(num);
+}
+serArifm()
+//  Функція кратне число
+var x =  prompt("Введіть число", "");
+function kratneNum() {
+if (x%5 == 0)
+	parity = "Число кратне";
+else {
+	parity = "Число не кратне";
+	}
+	alert(parity);
+} 
+kratneNum()
+// Виводить фразу
+var z =  prompt("Введіть фразу:", "");
+function meWork(){
+if (z == "Юмор" || "юмор")
+	alert ("Майстерність програміста не в тому, щоб писати програми, котрі працюють без помилок, а в тому, щоб писати програми, котрі працюють при будь-якій кількості помилок");
+else {
+	alert ("Справжній програміст ніколи не залишає в своїх програмах коментарів. Те, що писалося не легко, повинно розумітися не легко.");
+	}
+	alert(parity);
+}
+// Вивід фрази в залежності від часу доби
+var today= new Date();
+var hourNow=today.getHours();
+var greeting;
+if(hourNow>18){
+    greeting='Хорошого вечора!';
+} else if (hourNow>12){
+    greeting='Хорошого дня!';
+} else if (hourNow>0) {
+    greeting='Хорошого ранку!';
+} else{
+    greeting='Вітаю!';
+}
+document.write('<h3>' + greeting + '</h3>');
+ </script>
+</body>
+</html>
